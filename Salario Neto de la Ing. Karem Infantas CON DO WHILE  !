@@ -1,0 +1,49 @@
+// Programa Salario.cpp : Defines the entry point for the console application.
+// Autor : Cristhian Fabricio Rojas Luque
+// Fecha : 3 / 3 / 2015
+
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+float calculo_salarioneto (float salariobruto);
+
+void main ()
+{ 
+	float salariobruto,salarioneto,n,promedio, s=0,salariominimo=1440;
+	do{ cout<<"Ingrese n:";
+	cin>>n;}
+	while(n<=0);
+
+	for (int i=1;i<=1;i++)
+	
+	{
+		do{cout<<"Ingrese salariobruto:";
+		cin>> salariobruto;}
+		while(salariobruto<=0);
+         
+	 if(salariobruto>2*salariominimo)
+		 salarioneto= calculo_salarioneto(salariobruto);
+	 else
+		 salarioneto=salariobruto;
+
+	 cout<<"El salarioneto es:"<<salarioneto<<endl;
+	 s=s+salarioneto;
+		
+    }
+
+  promedio=s/n;
+  cout<<"El promedio es:"<<promedio;
+  _getch();
+
+ }
+
+float calculo_salarioneto (float salariobruto)
+
+{ float salarioneto;
+  salarioneto= (salariobruto)-(salariobruto*0.251);
+
+ return (salarioneto);
+}
