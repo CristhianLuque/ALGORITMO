@@ -1,0 +1,67 @@
+// EXAMINITO.cpp : Defines the entry point for the console application.
+// Autor : Cristhian F. Rojas Luque	
+// Fecha : 10 / 3 / 2015
+
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+#include "math.h"
+#define IVA=0.12
+#define AFP=0.13
+#define salariominimo=1650
+#define TAM=100
+
+using namespace std;
+void cargarvector (float salariobruto[],int TAM);
+void calcularsalarioneto (float salarioneto[],float salariobruto[], int TAM);
+float promedio (float salarioneto[], int TAM);
+void planilla(float salariobruto[], float salarioneto[], float promedio,int TAM);
+
+void main ()
+{   int n;
+    float sb[TAM], sn[TAM], p;
+
+
+	cout<<"Ingrese el numero de empleados :"; \n
+    cin>>TAM;
+	cargarvector(sb,n)
+    calcularsalarioneto(sn,sb,n);
+	p=promedio(sn,n);
+	planilla(sb,sb,p,n);
+	getch();
+
+
+
+void cargarvector (float salariobruto[],int TAM);
+{
+	for(int i=1;i<=n;i++)
+	{   cout<<"Ingrese Salario Bruto: "; \n
+	 	cin>>salariobruto[i];
+	}
+
+}
+
+
+void calcularsalarioneto (float salarioneto[],float salariobruto[], int TAM)
+{
+	for(int i=1;i<=n;i++)
+	{
+		salarioneto[i]=salariobruto[i]-(salariobruto[i]*0.251);
+	}
+}
+
+
+float promedio (float salarioneto[], int TAM)
+{float=0
+
+	for(int i=1;i<=n;i++)
+	z=z+salarioneto[i];
+    return(z);
+
+}
+void planilla(float salariobruto[], float salarioneto[], float promedio,int TAM)
+
+
+
+}
+
