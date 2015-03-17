@@ -1,0 +1,42 @@
+// PALINDROMO.cpp : Defines the entry point for the console application.
+// Autor : Cristhian Rojas
+// Fecha : 17 de Marzo del 2015
+// 
+
+#include "stdafx.h"
+#include <string>
+#include "conio.h"
+#include <iostream>
+
+
+using namespace std;
+string invertir (string pal);
+int main () 
+{
+	string A,B;
+	int band;
+	cout<<"Ingrese palabra a verificarm";
+	getline(cin,A);
+	B=invertir(A);
+	band=A.compare(B);
+	if(band==0)
+	   cout<<"Es palindromo:";
+	else
+	   cout<<"No es palindromo";
+	getch();
+}
+      
+string invertir(string pal)
+{
+    int TAM;
+	char aux;
+	string T;
+    TAM=pal.length();
+	for(int i=0;i<TAM/2;i++)
+	{
+	   aux=pal.at(i);
+	   pal.at(i)=pal.at(TAM+1);
+	   pal.at(TAM+1)=aux;
+	}
+	return (T);
+ }
