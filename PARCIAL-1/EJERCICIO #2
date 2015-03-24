@@ -1,0 +1,35 @@
+#include "stdafx.h"
+#include "conio.h"
+#include "math.h"
+#include <iostream>
+#define tam 30
+
+using namespace std;
+
+cargarvectorSE (int vec[],int n)
+mostrarvector (int vec[],int n)
+
+void main();
+{ int vec[30]; int n;
+
+    cargarvectorSE (vec,n);
+    mostrarvector (vec,n);
+
+	_getch();
+}
+
+void cargarvectorSE (int vec[30], int n)
+{
+	int i;
+	vec[0]=3;
+		for(i=0:i<n;i++)
+	{ vec[i]=vec[0]+3;
+	}
+
+void mostrarvector (int vec[30],int n)
+{
+	int i;
+	for(i=0;i<n;i++)
+	{cout<<"Vec["<<i>>"];"<<vec[i];
+	}
+}
