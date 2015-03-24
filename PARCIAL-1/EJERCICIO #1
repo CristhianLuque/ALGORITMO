@@ -1,0 +1,45 @@
+
+#include "stdafx.h"
+#include "conio.h"
+#include "math.h"
+#include <iostream>
+
+using namespace std;
+
+float Resolver(float a,float b,float c,float d)
+{
+	float r;
+	r=(b*b)-(4*a*c);
+		if(a==0)
+			cout<<"Solucion unica:"<<endl;
+	cout<<(-c/b);
+	if(r<0)
+	{
+		cout<<"Solucion imaginaria:"<<endl;
+		cout<<-b/(2*a);
+		cout<<sqrt(r*(-1)/(2*a));
+	}
+
+	if (r>0)
+	{
+		cout<<"Solucion 1:"<<endl;
+		cout<<-b+sqrt(d/(2*a));
+		cout<<"Solucion 2:"<<endl;
+		cout<<-b-sqrt(d/(2*a));
+	}
+	return 0;
+}
+int main (void)
+{
+	float a,b,c,d;
+	d=0;
+	cout<<"Ingrese valores a,b,c:"<<endl;
+	cin>>a;
+	cin>>b;
+	cin>>c;
+	Resolver(a,b,c,d);
+  _getch();
+	return 0 ;
+}
+
+
