@@ -1,0 +1,66 @@
+ struct rAmi{
+char nombre[50];
+int codigo;
+int edad;
+};
+
+void intercambiar(int p1, int p2)
+{
+
+FILE * pFile;
+pFile = fopen("amigo.dat", "rb+");
+rAmi rAmigo1, rAmigo2;
+
+
+fseek(pFile,sizeof(rAmigo1)*p1,SEEK_SET);
+fread(&rAmigo1, sizeof(rAmigo1), 1, pFile);
+
+
+fseek(pFile,sizeof(rAmigo2)*p2,SEEK_SET);
+fread(&rAmigo2, sizeof(rAmigo2), 1, pFile);
+
+
+fseek(pFile,sizeof(rAmigo1)*p1,SEEK_SET);
+fwrite(&rAmigo2, sizeof(rAmigo2), 1, pFile);
+
+fseek(pFile,sizeof(rAmigo1)*p2,SEEK_SET);
+fwrite(&rAmigo1, sizeof(rAmigo1), 1, pFile);
+
+
+fclose(pFile);
+
+}
+void ordenar()
+{
+
+FILE * pFile;
+pFile = fopen("amigo.dat", "rb+");
+rAmi rAmigo1, rAmigo2;
+
+int i=0,j;
+
+while (feof(pFile))
+{
+
+j = i+1;
+
+fseek(pFile,sizeof(rAmigo1)*i,SEEK_SET);
+fread(&rAmigo1, sizeof(rAmigo1), 1, pFile);
+
+while (feof(pFile) && !encontro)
+{
+leer segundo registro
+fseek(pFile,sizeof(rAmigo2)*j,SEEK_SET);
+fread(&rAmigo2, sizeof(rAmigo2), 1, pFile);
+
+if(rAmigo1.edad > rAmigo2.edad)
+{
+
+intercambiar(i,j);
+}
+j++;
+}
+i++;
+}
+fclose(pFile);
+}
